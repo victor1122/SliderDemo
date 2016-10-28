@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         context = this.getApplicationContext();
         //Show slider
         viewPager = (ViewPager) findViewById(R.id.view_paper);
-        swipeAdapter = new SwipeAdapter(this);
+        swipeAdapter = new SwipeAdapter(this, viewPager.getResources().getStringArray(R.array.eng_name));
         viewPager.setAdapter(swipeAdapter);
         //set color array for dots and dots array size, must be put before call addBottomDots to prevent null
         colorsInactive = viewPager.getResources().getIntArray(R.array.array_dot_inactive);
