@@ -48,6 +48,7 @@ public class SwipeAdapter extends PagerAdapter {
         ImageView imageView = (ImageView) itemView.findViewById(R.id.image_view);
         TextView textView = (TextView) itemView.findViewById(R.id.text_view);
         //set data every slide
+        System.out.println("Position: "+position);
         imageView.setImageResource(image.getResourceId(position,-1));
         textView.setText(enName[position]+"\n"+japName[position]);
         container.addView(itemView);
